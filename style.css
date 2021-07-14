@@ -6,14 +6,131 @@ margin: 0px;
 
 body {
     padding: 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    color: rgb(224, 222, 222);
 }
+
+
 
 .header {
    min-height: 100vh;
    width: 100%;
-   background-image: linear-gradient(rgba(85, 85, 88, 0.3),rgba(85, 85, 88, 0.7)),url(/images/Fitness_1.jpg);
+   background-image: linear-gradient(rgba(79, 79, 83, 0.3),rgba(79, 79, 83, 0.6)),url(/images/Fitness_1.jpg);
    background-position: center;
    background-size: cover;
+
+}
+
+nav {
+    display: flex;
+    padding: 2px 4px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 8px 12px;
+    justify-content: space-around;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+.nav-links ul li::after {
+    content: '';
+    width: 100%;
+    height:1px;
+    background: rgb(168, 92, 92);
+    display: block;
+    padding-top: 3px;
+    margin: auto;
+    transition:.5s;
+}
+
+.nav-links ul li:hover::after {
+    width:0%
+}
+
+.text-box {
+    width: 90%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+
+.text-box h1 {
+    font-size:62px ;
+    font-weight: 600;
+
+}
+
+.text-box p {
+    margin: 10px 0 40px ;
+    font-size: 16px;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    border: 1px white solid;
+    padding: 12px 32px ;
+    background: rgba(224, 222, 222, .3);
+    position:relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background:  rgba(197, 10, 51, 0.6);
+    transition: 1s;
+    border: 1px rgba(197, 10, 51, 0.6)solid;
+}
+
+@media(max-width: 700px){
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links {
+        position: absolute;
+        background: rgba(197, 10, 51, 0.9);
+        height:100vh;
+        width:150px;
+        top:0;
+        right:0;
+        text-align: left;
+        z-index: 2;
+        
+        
+    }
+    .nav-links ul li {
+        display:block;
+        
+    }
+    .nav-links ul li a {
+        font-size: 14px;
+        
+        
+    }
 
 }
