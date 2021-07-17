@@ -36,6 +36,8 @@ nav img {
 .nav-links {
     flex: 1;
     text-align: right;
+    position: relative;
+    right:20px;
 }
 
 .nav-links ul li {
@@ -44,6 +46,7 @@ nav img {
     position: relative;
     padding: 8px 12px;
     justify-content: space-around;
+    
 }
 
 .nav-links ul li a {
@@ -81,12 +84,14 @@ nav img {
 .text-box h1 {
     font-size:62px ;
     font-weight: 600;
+    color: white;
 
 }
 
 .text-box p {
     margin: 10px 0 40px ;
     font-size: 16px;
+    color: white;
 }
 
 .hero-btn {
@@ -105,6 +110,21 @@ nav img {
     background:  rgba(197, 10, 51, 0.6);
     transition: 1s;
     border: 1px rgba(197, 10, 51, 0.6)solid;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+
+.nav-links i {
+    display: none;
+}
+
+.fas { 
+    color: white;
+    font-size: 20px;
+    padding-right: 20px;
+    position: relative;
+    top:-7px;
 }
 
 @media(max-width: 700px){
@@ -113,24 +133,55 @@ nav img {
     }
     .nav-links {
         position: absolute;
-        background: rgba(197, 10, 51, 0.9);
+        background: rgba(230, 62, 126, 0.9);
         height:100vh;
         width:150px;
         top:0;
-        right:0;
+        right:-150px;
         text-align: left;
         z-index: 2;
-        
-        
+              
     }
+
     .nav-links ul li {
         display:block;
-        
     }
+
     .nav-links ul li a {
         font-size: 14px;
-        
-        
+    }
+
+    .nav-links i {
+        display: block;
+        color: white;
+        font-size: 20px;
+        margin:20px;
+        cursor:pointer;
     }
 
 }
+
+/* -----courses---- */
+
+    .course {
+        width:80%;
+        margin:auto;
+        text-align: center;
+        padding-top: 100px;  
+    }
+
+    .course h1 {
+        font-size:36px ;
+        font-weight: 600;
+    }
+
+    .course p {
+        font-size: 16px;
+        color:#777;
+        font-weight: 400;
+        line-height: 22px;
+        padding:10px;
+    }
+
+    
+
